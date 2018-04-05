@@ -1,58 +1,492 @@
+<!DOCTYPE html>
 <html>
-<html lang="en">
-  <head>
-    <!doctype html>
+<head>
+<title>B2RSports</title>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TTMW27R');</script>
+<!-- End Google Tag Manager -->
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Back2RootSports</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  </head>
-<body>
-  <!-- Where the header/logo may go -->
-<div class="container">
-  <div class="jumbotron">
-    <h1>Back2RootSports</h1>
-    <p>We will need to add the logo of B2RSports either in this header or very close to it</p>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116547076-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116547076-1');
+</script>
+
+
+<style>
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+}
+
+.times{
+  font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif;
+  font-size: '20px';
+}
+</style>
+</head>
+<body id="myPage">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTMW27R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Sidebar on click -->
+
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d1 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Apparel</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Mission</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+
+  <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>-->
+ </div>
+
+  <!-- Navbar on small screens -->
+ <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#work" class="w3-bar-item w3-button">Mission</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Apparel</a>
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
   </div>
-  <p>Excellence is the gradual result of always striving to do better. "Today, and every day, deliver more than you are getting paid to do</p>
-  <p>Perfection is not attainable, but if we chase perfection we can catch excellence.</p>      
 </div>
-  <!-- A grey horizontal navbar that becomes vertical on small screens -->
-<nav class="navbar navbar-expand-sm bg-light">
 
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Apparel</a>
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="images/b2rbanner.png" alt="field" style="width:100%;min-height:350px;max-height:600px;">
+ <!-- <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">Back2RootSports</button>
+  </div> -->
+</div>
+
+<!-- Modal -->
+
+
+<!-- Pricing Row -->
+<div class="w3-row-padding w3-center w3-padding-32" id="pricing">
+    <div class='Times'><h1>APPAREL</h1> </div>
+    <div class='Times'><h2>ICELAND</h2> </div>
+    <h3>“We all have a little Ice in our veins.”</h3>
+    <p>While Icelandic may not be a large demographic in the United States, we found their team’s success story to be inspirational and something the USSF should look to in order to mend some of our own flaws. Their run through the 2016 Euros and qualification for the 2018 World Cup™ are some of the greatest underdog tales ever told. Show your support with one of our great Americans For Iceland shirts!
+</p>
+
+<br>
+<div class="w3-half w3-margin-bottom">
+  <ul class="w3-ul w3-border w3-hover-shadow">
+    <li class="w3-theme">
+      <p class="w3-xlarge">Americans for Iceland Uncle Sam Short Sleeve</p>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">About Us</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Contact Info</a>
+    <li class="w3-padding-16"><b>Sizes:</b> S, M, L, XL, 2XL, 3XL</li>
+    <li class="w3-padding-16"><b>Colors:</b> Blue </li>
+    <a href="UncleSamIceland.html" target="_blank"> <li class="w3-padding-16"> <img src="images/Americans for Iceland Sam SS.PNG" alt="CEO" style="width:45%" Height="300px" class="w3-round">
+    <img src="images/Americans for Iceland SS (back).PNG" alt="CEO" style="width:45%" Height="300px" class="w3-round"></li> </a>
+
+    <!--<li class="w3-padding-16">
+      <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+      <span class="w3-opacity"></span>
+    </li>-->
+
+    <li class="w3-theme-l5 w3-padding-24">
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="J9BYGV9YX38TC">
+              <table>
+              <tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr><tr><td><select name="os0">
+              	<option value="S">S $29.95 USD</option>
+              	<option value="M">M $29.95 USD</option>
+              	<option value="L">L $29.95 USD</option>
+              	<option value="XL">XL $32.95 USD</option>
+              	<option value="2XL">2XL $32.95 USD</option>
+              	<option value="3XL">3XL $32.95 USD</option>
+              </select> </td></tr>
+              </table>
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif
+              " border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif
+              " width="1" height="1">
+      </form>
+
+    <!--  <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Add to Cart</button> -->
     </li>
   </ul>
+</div>
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Americans for Iceland Uncle Sam Long Sleeve</p>
+        </li>
+        <li class="w3-padding-16"><b>Sizes:</b> S, M, L, XL, 2XL, 3XL</li>
+        <li class="w3-padding-16"><b>Colors:</b> Dark Blue </li>
+        <a href="UncleSamIcelandLS.html" target="_blank"> <li class="w3-padding-16"><img src="images/Americans for Iceland Sam LS.PNG" alt="CEO" style="width:45%" Height="300px" class="w3-round">
+        <img src="images/Americans for Iceland LS (back).PNG" alt="CEO" style="width:45%" Height="300px" class="w3-round"></li> </a>
 
-</nav>
-  <p>This will be a testing ground for the upcoming B2RS website. </p>
-  <ul>
-    <li>Add a Header with Logo</li>
-    <li>Add the navbar</li>
-    <li>Add Opening paragraphs</li>
-    <li>Add copyright stuff on bottom</li>
-    <li>Get money get paid </li>
-  </ul>
+      <!--  <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+          <span class="w3-opacity"></span>
+        </li> -->
+        <li class="w3-theme-l5 w3-padding-24">
+
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="P492D3H8UKWWG">
+          <table>
+          <tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr><tr><td><select name="os0">
+          	<option value="S">S $39.95 USD</option>
+          	<option value="M">M $39.95 USD</option>
+          	<option value="L">L $39.95 USD</option>
+          	<option value="XL">XL $42.95 USD</option>
+          	<option value="2XL">2XL $42.95 USD</option>
+          	<option value="3XL">3XL $42.95 USD</option>
+          </select> </td></tr>
+          </table>
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+        <!--  <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Add to Cart</button> -->
+        </li>
+      </ul>
+    </div>
+
+    <br>
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Americans for Iceland Delaware Short Sleeve</p>
+        </li>
+        <li class="w3-padding-16"><b>Sizes:</b> S, M, L, XL, 2XL, 3XL</li>
+        <li class="w3-padding-16"><b>Colors:</b> Blue </li>
+        <a href="LongboatIcelandSS.html" target="_blank"><li class="w3-padding-16"><img src="images/Americans for Iceland Delaware SS.PNG" alt="CEO" style="width:45%" Height="300px" class="w3-round">
+        <img src="images/Americans for Iceland SS (back).PNG" alt="CEO" style="width:45%" Height="300px" class="w3-round"></li> </a>
+
+        <!--<li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+          <span class="w3-opacity"></span>
+        </li>-->
+
+        <li class="w3-theme-l5 w3-padding-24">
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="9G7JLWF5ZCWZY">
+            <table>
+            <tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr><tr><td><select name="os0">
+            	<option value="S">S $29.95 USD</option>
+            	<option value="M">M $29.95 USD</option>
+            	<option value="L">L $29.95 USD</option>
+            	<option value="XL">XL $32.95 USD</option>
+            	<option value="2XL">2XL $32.95 USD</option>
+            	<option value="3XL">3XL $32.95 USD</option>
+            </select> </td></tr>
+            </table>
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!--  <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Add to Cart</button> -->
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Americans for Iceland Delaware Long Sleeve</p>
+        </li>
+        <li class="w3-padding-16"><b>Sizes:</b> S, M, L, XL, 2XL, 3XL</li>
+        <li class="w3-padding-16"><b>Colors:</b> Dark Blue </li>
+        <a href="LongboatIcelandLS.html" target="_blank"> <li class="w3-padding-16"><img src="images/Americans for Iceland Delaware LS.PNG" alt="CEO" style="width:45%" Height="300px" class="w3-round">
+        <img src="images/Americans for Iceland LS (back).PNG" alt="CEO" style="width:45%" Height="300px" class="w3-round"></li> </a>
+
+        <!--<li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+          <span class="w3-opacity"></span>
+        </li>-->
+
+        <li class="w3-theme-l5 w3-padding-24">
+          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="QGJBPDB3EB8P2">
+              <table>
+              <tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr><tr><td><select name="os0">
+              	<option value="S">S $39.95 USD</option>
+              	<option value="M">M $39.95 USD</option>
+              	<option value="L">L $39.95 USD</option>
+              	<option value="XL">XL $42.95 USD</option>
+              	<option value="2XL">2XL $42.95 USD</option>
+              	<option value="3XL">3XL $42.95 USD</option>
+              </select> </td></tr>
+              </table>
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+          <!--<button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Add to Cart</button>-->
+        </li>
+      </ul>
+    </div>
+
+  <!--  <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">ICELAND</p>
+        </li>
+        <li class="w3-padding-16"><b>Sizes:</b> S, M, L, XL, XXL</li>
+        <li class="w3-padding-16"><b>Colors:</b> Red, White, Blue, Green</li>
+        <li class="w3-padding-16"><img src="images/placeholder.png" alt="CEO" style="width:45%" class="w3-round"></li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+          <span class="w3-opacity"></span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Add to Cart</button>
+        </li>
+      </ul>
+    </div> -->
+
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<!--w3-quarter-->
+<div class="w3-center">
+<h2>Our Mission</h2>
+<p>Our mission is to provide products of the highest quality and exceptional customer service while promoting the development and continued support of soccer in the United States.</p>
+<h2>About Us</h2>
+<p>
+  B2R (Back 2 Roots) Sports LLC is an apparel company on a mission to reinvigorate American soccer
+  fans after the USA’s failure to qualify for the 2018 World Cup™. We are providing high quality
+  T-shirts with unique designs that represent the diversity and passion of soccer fans in the USA.
+  Whether you’re supporting your country of ancestry or simply joining pulling for a team you
+  admire, we are happy to provide you with the apparel you need. Additionally, we will be
+  donating 10% of our proceeds to our new charitable organization – the Pletcher Family
+  Future of Fútbol Foundation - in order to contribute to the future growth of the sport
+  in America on a local level. We thank you for your support and look forward to an exciting,
+  soccer-filled summer with you! When you don’t know who to root for, go Back to your Roots!
+
+</p>
+
+
+</div>
+
+<!-- Place donation process here down to container -->
+<!--<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="images/shield.png" alt="SHIELD" style="width:100%">
+  <div class="w3-container">
+  <h3>U.S. Soccer Foundation </h3>
+  <h4>Trade</h4>
+  <p>Talk about donation process</p>
+  <p>Talk about donation process</p>
+  <p>Talk about donation process</p>
+  <p>Talk about donation process</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="images/shield.png" alt="SHIELD" style="width:100%">
+  <div class="w3-container">
+  <h3>U.S. Soccer Foundation </h3>
+  <h4>Trade</h4>
+  <p>Talk about donation process</p>
+  <p>Talk about donation process</p>
+  <p>Talk about donation process</p>
+  <p>Talk about donation process</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="images/shield.png" alt="SHIELD" style="width:100%">
+  <div class="w3-container">
+  <h3>U.S. Soccer Foundation </h3>
+  <h4>Trade</h4>
+  <p>Talk about donation process</p>
+  <p>Talk about donation process</p>
+  <p>Talk about donation process</p>
+  <p>Talk about donation process</p>
+  </div>
+  </div>--!>
+</div>
+
+
+</div>
+
+<!-- Container -->
+<!--<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>-->
+
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>OUR TEAM</h2>
+<p>Meet the team:</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="images/dylan.jpg" alt="CEO" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Dylan Pletcher </h3>
+  <p>General Manager</p>
+  <div class="w3-small"><p> Dylan is a junior at Indiana University studying Business
+Management, Sustainable Energy, and German. He is a lifelong US Soccer fan and
+remains optimistic about the future of the team despite their recent shortcomings. </p> </div>
+    <div class="w3-tiny"> <p> <a href="https://www.linkedin.com/in/dylanpletcher/"> LinkedIn </a> </p> </div>
+
+</div>
+
+<div class="w3-quarter">
+  <img src="images/matt.jpg" alt="CEO" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Matt Pletcher </h3>
+  <p>Advisor</p>
+	<div class="w3-small"><p> Matt Pletcher is a lifelong soccer fan, and one of the few to have grown up playing it in Northern Indiana during the 70s. Today he is a die-hard Liverpool fan who hopes to
+    see the American talent that is spreading across Europe reach its full potential. </p> </div>
+		 <div class="w3-tiny"> <p> <a href="https://www.linkedin.com/in/matt-pletcher-145572b/"> LinkedIn</a> </p> </div>
+</div>
+
+<div class="w3-quarter">
+  <img src="images/jacob.jpg" alt="CTO" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Jacob Good</h3>
+  <p>Backend Web Developer</p>
+    <div class="w3-small"><p> Jacob is a computer specialist with interests in networking, server management, and software engineering. He has always been active in sports, especially with soccer, having played for nearly 15 years. </p> </div>
+		 <div class="w3-tiny"> <p> <a href="https://www.linkedin.com/in/jacob-g-52574ba7/"> LinkedIn</a> </p> </div>
+</div>
+
+<div class="w3-quarter">
+  <img src="images/justin.jpg" alt="Web" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Justin Drinkall</h3>
+  <p>Web Designer</p>
+    <div class="w3-small"><p> Justin is a junior at Indiana University studying Informatics while getting minors in Business and Marketing. While he is a relatively new fan of US soccer,
+  he looks forward to its growth and hopes to see the US being competitive in the world cup once again.  </p> </div>
+		 <div class="w3-tiny"> <p> <a href="https://www.linkedin.com/in/justin-drinkall-015b20131/"> LinkedIn</a> </p> </div>
+</div>
+
+<div class="w3-quarter">
+  <img src="images/carav2.jpeg" alt="Designer" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Cara Yoder </h3>
+  <p>Shirt Designer</p>
+	<div class="w3-small"><p> Cara Yoder is a student at Indiana University, Bloomington pursuing a BFA in Graphic Design and the Liberal Arts & Management Program certificate. She enjoys spending time with friends
+    and family, traveling, baking bread, and living in the present. </p> </div>
+	<div class="w3-tiny"> <p> <a href="https://www.linkedin.com/in/cara-yoder-410008127/"> LinkedIn</a> </p> </div>
+</div>
+
+<!--<div class="w3-quarter">
+  <img src="images/tommy.jpg" alt="Designer" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Thomas McLaughlin</h3>
+  <p>Shirt Designer</p>
+    <div class="w3-small"><p> Hello I will be talking about my life. </p> </div>
+		 <div class="w3-tiny"> <p> <a href="https://www.linkedin.com/in/dylanpletcher/"> LinkedIn</a> </p> </div>
+</div>-->
+
+</div>
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i> Bloomington, Indiana US</p>
+      <!--<p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  Phone </p>-->
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  customerservice@back2rootssports.com</p>
+    </div>
+   <!-- <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div> -->
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="https://twitter.com/B2RSports" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.reddit.com/user/B2R_Sports/" title="Reddit"><i class="fa fa-reddit"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/b2rsports/" title="Instagram"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/company/18513315/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <!--<a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>-->
+  <!--<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
 </body>
-
-
 </html>
