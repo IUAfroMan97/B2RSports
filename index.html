@@ -16,6 +16,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="script.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116547076-1"></script>
@@ -83,23 +89,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  </div>
 
   <!-- Navbar on small screens -->
+<div class="w3-top">
+<div class="w3-bar w3-theme-d1 w3-left-align">
+<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
     <a href="#work" class="w3-bar-item w3-button">Mission</a>
     <!--<a href="#pricing" class="w3-bar-item w3-button">Apparel</a>-->
     <a href="#team" class="w3-bar-item w3-button">Team</a>
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button" title="Notifications">Countries <i class="fa fa-caret-down"></i></button>
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+    <a href="#Mexico" class="w3-bar-item w3-button">Mexico</a>
+    <a href="#France" class="w3-bar-item w3-button">France</a>
+    <a href="#Germany" class="w3-bar-item w3-button">Germany</a>
+    <a href="#England" class="w3-bar-item w3-button">England</a>
+    <a href="#Iceland" class="w3-bar-item w3-button">Iceland</a>
+
+    <!--<button class="w3-button" title="Notifications" target="choices">Countries <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-hide-small" id="choices">
         <a href="#Mexico" class="w3-bar-item w3-button">Mexico</a>
         <a href="#France" class="w3-bar-item w3-button">France</a>
         <a href="#Germany" class="w3-bar-item w3-button">Germany</a>
         <a href="#England" class="w3-bar-item w3-button">England</a>
         <a href="#Iceland" class="w3-bar-item w3-button">Iceland</a>
-      </div>
+      </div>-->
     <!--<a href="#" class="w3-bar-item w3-button">Search</a>-->
   </div>
 </div>
+</div>
+
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
@@ -851,6 +867,119 @@ function openNav() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+(function($) {
+
+  $.fn.menumaker = function(options) {
+
+      var cssmenu = $(this), settings = $.extend({
+        title: "Menu",
+        format: "dropdown",
+        breakpoint: 768,
+        sticky: false
+      }, options);
+
+      return this.each(function() {
+        cssmenu.find('li ul').parent().addClass('has-sub');
+        if (settings.format != 'select') {
+          cssmenu.prepend('<div id="menu-button">' + settings.title + '</div>');
+          $(this).find("#menu-button").on('click', function(){
+            $(this).toggleClass('menu-opened');
+            var mainmenu = $(this).next('ul');
+            if (mainmenu.hasClass('open')) {
+              mainmenu.hide().removeClass('open');
+            }
+            else {
+              mainmenu.show().addClass('open');
+              if (settings.format === "dropdown") {
+                mainmenu.find('ul').show();
+              }
+            }
+          });
+
+          multiTg = function() {
+            cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+            cssmenu.find('.submenu-button').on('click', function() {
+              $(this).toggleClass('submenu-opened');
+              if ($(this).siblings('ul').hasClass('open')) {
+                $(this).siblings('ul').removeClass('open').hide();
+              }
+              else {
+                $(this).siblings('ul').addClass('open').show();
+              }
+            });
+          };
+
+          if (settings.format === 'multitoggle') multiTg();
+          else cssmenu.addClass('dropdown');
+        }
+
+        else if (settings.format === 'select')
+        {
+          cssmenu.append('<select style="width: 100%"/>').addClass('select-list');
+          var selectList = cssmenu.find('select');
+          selectList.append('<option>' + settings.title + '</option>', {
+                                                         "selected": "selected",
+                                                         "value": ""});
+          cssmenu.find('a').each(function() {
+            var element = $(this), indentation = "";
+            for (i = 1; i < element.parents('ul').length; i++)
+            {
+              indentation += '-';
+            }
+            selectList.append('<option value="' + $(this).attr('href') + '">' + indentation + element.text() + '</option');
+          });
+          selectList.on('change', function() {
+            window.location = $(this).find("option:selected").val();
+          });
+        }
+
+        if (settings.sticky === true) cssmenu.css('position', 'fixed');
+
+        resizeFix = function() {
+          if ($(window).width() > settings.breakpoint) {
+            cssmenu.find('ul').show();
+            cssmenu.removeClass('small-screen');
+            if (settings.format === 'select') {
+              cssmenu.find('select').hide();
+            }
+            else {
+              cssmenu.find("#menu-button").removeClass("menu-opened");
+            }
+          }
+
+          if ($(window).width() <= settings.breakpoint && !cssmenu.hasClass("small-screen")) {
+            cssmenu.find('ul').hide().removeClass('open');
+            cssmenu.addClass('small-screen');
+            if (settings.format === 'select') {
+              cssmenu.find('select').show();
+            }
+          }
+        };
+        resizeFix();
+        return $(window).on('resize', resizeFix);
+
+      });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+
+$(document).ready(function() {
+  $("#cssmenu").menumaker({
+    title: "Menu",
+    format: "dropdown"
+  });
+
+  $("#cssmenu a").each(function() {
+  	var linkTitle = $(this).text();
+  	$(this).attr('data-title', linkTitle);
+  });
+});
+
+});
+})(jQuery);
+
 </script>
 
 </body>
