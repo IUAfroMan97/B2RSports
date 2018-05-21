@@ -178,3 +178,10 @@
 #cssmenu.small-screen #menu-button.menu-opened:before {
   background: #dff2fa;
 }
+.inline{
+      display:inline-block;
+}
+.nowrap{
+  white-space: nowrap;
+  overflow: hidden;
+}
